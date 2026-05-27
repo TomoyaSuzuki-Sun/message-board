@@ -11,11 +11,11 @@
 
     <body>
 
-        {{-- ナビゲーションバー --}}
-        @include('commons.navbar')      // navbar.blade.phpを読み込む
+        <!-- {{-- ナビゲーションバー --}} -->
+        @include('commons.navbar')
 
         <div class="container mx-auto">
-            {{-- エラーメッセージ --}}
+            <!-- {{-- エラーメッセージ --}} -->
             @include('commons.error_messages')
 
             @yield('content')
