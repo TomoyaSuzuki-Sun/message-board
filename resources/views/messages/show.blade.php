@@ -11,17 +11,20 @@
             <th>id</th>
             <td>{{ $message->id }}</td>
         </tr>
-
+        <tr>
+            <th>タイトル</th>
+            <td>{{ $message->title }}</td>
+        </tr>
         <tr>
             <th>メッセージ</th>
             <td>{{ $message->content }}</td>
         </tr>
     </table>
 
-    <!-- {{-- メッセージ編集ページへのリンク --}} -->
+    {{-- メッセージ編集ページへのリンク --}}
     <a class="btn btn-outline" href="{{ route('messages.edit', $message->id) }}">このメッセージを編集</a>
-    
-    <!-- {{-- メッセージ削除フォーム --}} -->
+
+    {{-- メッセージ削除フォーム --}}
     <form method="POST" action="{{ route('messages.destroy', $message->id) }}" class="my-2">
         @csrf
         @method('DELETE')
